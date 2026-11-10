@@ -1,0 +1,27 @@
+{
+  "name": "api-testing-playwright-framework",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QAMadeEasy: API test automation framework with Playwright and TypeScript, built on the practice API",
+  "scripts": {
+    "api": "node practice-api/server.js",
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=ui",
+    "test:smoke": "playwright test --grep @smoke",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "learn:1": "tsx learn/01-values.ts",
+    "learn:2": "tsx learn/02-objects-arrays.ts",
+    "learn:3": "tsx learn/03-functions-types.ts",
+    "learn:4": "tsx learn/04-classes.ts",
+    "learn:5": "tsx learn/05-async-await.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.6.3",
+    "ajv": "8.18.0",
+    "tsx": "4.23.12",
+    "typescript": "6.0.3"
+  }
+}

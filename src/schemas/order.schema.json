@@ -1,0 +1,15 @@
+{
+  "$id": "order",
+  "type": "object",
+  "required": ["id", "owner", "productId", "quantity", "total", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "owner": { "type": "string" },
+    "productId": { "type": "integer", "minimum": 1 },
+    "quantity": { "type": "integer", "minimum": 1 },
+    "total": { "type": "number", "minimum": 0 },
+    "status": { "enum": ["PLACED", "SHIPPED", "DELIVERED", "CANCELLED"] },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

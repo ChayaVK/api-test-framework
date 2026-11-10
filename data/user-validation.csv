@@ -1,0 +1,8 @@
+case,name,email,role,expectedStatus,expectedCode,field
+Valid tester,Sara Khan,{unique},tester,201,,
+Shortest name (2 letters),Al,{unique},tester,201,,
+Name of 1 letter,A,{unique},tester,400,VALIDATION_FAILED,name
+Email without @,Ravi Kumar,ravi-at-example.com,tester,400,VALIDATION_FAILED,email
+Role that does not exist,Mira Das,{unique},superhero,400,VALIDATION_FAILED,role
+Email already used,Asha Again,asha@example.com,tester,409,EMAIL_TAKEN,
+Email already used (other case),Asha Again,ASHA@EXAMPLE.COM,tester,409,EMAIL_TAKEN,

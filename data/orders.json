@@ -1,0 +1,8 @@
+[
+  { "case": "one item", "productId": 1, "quantity": 1, "expectedStatus": 201 },
+  { "case": "maximum quantity (10)", "productId": 4, "quantity": 10, "expectedStatus": 201 },
+  { "case": "quantity 0", "productId": 1, "quantity": 0, "expectedStatus": 400, "expectedCode": "VALIDATION_FAILED" },
+  { "case": "quantity 11 (above the limit)", "productId": 1, "quantity": 11, "expectedStatus": 400, "expectedCode": "VALIDATION_FAILED" },
+  { "case": "product out of stock", "productId": 3, "quantity": 1, "expectedStatus": 409, "expectedCode": "OUT_OF_STOCK" },
+  { "case": "product does not exist", "productId": 999, "quantity": 1, "expectedStatus": 422, "expectedCode": "PRODUCT_NOT_FOUND" }
+]

@@ -1,0 +1,14 @@
+{
+  "$id": "user",
+  "type": "object",
+  "required": ["id", "name", "email", "role", "active", "createdAt"],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "name": { "type": "string", "minLength": 2, "maxLength": 50 },
+    "email": { "type": "string", "format": "email" },
+    "role": { "enum": ["tester", "developer", "manager", "admin"] },
+    "active": { "type": "boolean" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
